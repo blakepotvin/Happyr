@@ -104,7 +104,7 @@ app.get('/clear', (req, res) => {
         // phone = req.query.phone;
         db_del();
     } finally {
-        res.redirect('http://prodxgy.github.io/SpartaHack/);
+        res.redirect('http://prodxgy.github.io/SpartaHack/');
     }
 })
 
