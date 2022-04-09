@@ -10,12 +10,12 @@ import React, { useEffect, useState } from "react";
 
 function insertclick(phone_num) {
   console.log(phone_num);
-  window.location.href = `http://34.125.136.136:3000/insert/?phone=${phone_num}`;
+  window.location.href = `http://localhost:3000/insert/?phone=${phone_num}`;
 }
 
 function deleteclick(phone_num) {
   console.log(phone_num);
-  window.location.href = `http:/34.125.136.136:3000/delete/?phone=${phone_num}`;
+  window.location.href = `http:/localhost:3000/delete/?phone=${phone_num}`;
 }
 
 function App() {

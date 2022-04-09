@@ -74,7 +74,7 @@ app.get('/test', (req, res) => {
 app.get('/insert', (req, res) => {
     try {
         phone = req.query.phone;
-        db_insert('+1' + phone);
+        db_insert('+' + phone);
     } finally {
         res.redirect('http://localhost:3001/');
     }
