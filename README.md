@@ -1,5 +1,7 @@
 # SpartaHack
 
+dear tier 3 twitch subs,
+
 steps to work:
 
 1. clone repo
