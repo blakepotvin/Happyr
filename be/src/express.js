@@ -49,7 +49,9 @@ app.get('/test', (req, res) => {
 
 app.get('/insert', (req, res) => {
     phone = req.query.phone;
-    db_insert(phone_num);
+    db_insert(phone);
+    // res.send('Appended ' + phone + ' to MongoDB!');
+    res.redirect('..');
 })
 
 app.get('/find', (req, res) => {
