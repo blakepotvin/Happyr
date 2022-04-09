@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/SpartaHack/static/css/main.2f02a639.css",
-    "main.js": "/SpartaHack/static/js/main.dfeb66b8.js",
+    "main.css": "/SpartaHack/static/css/main.31c1bbf2.css",
+    "main.js": "/SpartaHack/static/js/main.e54287be.js",
     "static/js/787.cda612ba.chunk.js": "/SpartaHack/static/js/787.cda612ba.chunk.js",
     "index.html": "/SpartaHack/index.html",
-    "main.2f02a639.css.map": "/SpartaHack/static/css/main.2f02a639.css.map",
-    "main.dfeb66b8.js.map": "/SpartaHack/static/js/main.dfeb66b8.js.map",
+    "main.31c1bbf2.css.map": "/SpartaHack/static/css/main.31c1bbf2.css.map",
+    "main.e54287be.js.map": "/SpartaHack/static/js/main.e54287be.js.map",
     "787.cda612ba.chunk.js.map": "/SpartaHack/static/js/787.cda612ba.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.2f02a639.css",
-    "static/js/main.dfeb66b8.js"
+    "static/css/main.31c1bbf2.css",
+    "static/js/main.e54287be.js"
   ]
 }
