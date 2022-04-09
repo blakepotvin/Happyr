@@ -42,16 +42,32 @@ async function db_find(phone_num) {
     await m.close();
 }
 
+async function db_del(phone_num) {
+    await m.init();
+
+    doc = {
+        phone: phone_num
+    }
+
+    const result = await m.deleteMany(doc);
+
+    console.log("Successfully deleted " + result.deletedCount + " documents");
+}
+
 
 app.get('/test', (req, res) => {
     res.send('Hello World!')
 })
 
 app.get('/insert', (req, res) => {
-    phone = req.query.phone;
-    db_insert(phone);
+    try {
+        phone = req.query.phone;
+        db_insert(phone);
+    } finally {
+        res.redirect('http://localhost:3001/');
+    }
     // res.send('Appended ' + phone + ' to MongoDB!');
-    res.redirect('..');
+    // res.redirect('..');
 })
 
 app.get('/find', (req, res) => {
@@ -59,9 +75,20 @@ app.get('/find', (req, res) => {
     db_find(phone);
 })
 
+app.get('/delete', (req, res) => {
+
+    try {
+        phone = req.query.phone;
+        db_del(phone);
+    } finally {
+        res.redirect('http://localhost:3001/');
+    }
+
+})
+
 
 
 app.listen(port, () => {
-    console.log(`SpotifyHandler listening on port ${port}`)
+    console.log(`Express is listening on port ${port}`)
   })
 
