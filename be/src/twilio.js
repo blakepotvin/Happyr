@@ -128,14 +128,14 @@ async function sendText(client, phone, quote) {
 
 
     console.log(text);
-    // client.messages
-    // .create({
-    //     body: text,
-    //     to: phone,
-    //     from: '+18778214016',
-    // })
-    // .then((message) => console.log(message.sid));
-    // console.log(phone)
+    client.messages
+    .create({
+        body: text,
+        to: phone,
+        from: '+18778214016',
+    })
+    .then((message) => console.log(message.sid));
+    console.log(phone)
 }
 
 
