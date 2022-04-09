@@ -10,7 +10,13 @@ function App() {
         <input type="phone" placeholder="Phone Number" />
         <Row>
           <Col>
-            <Button variant="primary">Insert</Button>
+            <Button variant="primary" onClick={()=>{
+              fetch(
+                "http://localhost:3000/insert?phone=1234567890"
+              ).then(res => res.json())
+              .then(data => console.log(data))
+              .catch(err => console.log(err))
+            }}>Insert</Button>
           </Col>
           <Col>
             <Button variant="danger">Delete</Button>
