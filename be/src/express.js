@@ -1,3 +1,6 @@
+require('dotenv').config();
+const id = process.env.MONGO_API;
+
 const express = require('express')
 const app = express()
 const axios = require('axios')
@@ -5,7 +8,7 @@ const port = 3000
 const mongo = require('./mongo.js');
 const { MongoClient, ServerApiVersion } = require('mongodb');
 
-const uri = "mongodb+srv://prathik:asdf@spartahack.c84ow.mongodb.net/test?retryWrites=true&w=majority";
+const uri = id;
 const cli = new MongoClient(uri, { useNewUrlParser: true, useUnifiedTopology: true, serverApi: ServerApiVersion.v1 });
 const db_name = "test";
 const collection_name = "test";
@@ -71,7 +74,7 @@ app.get('/test', (req, res) => {
 app.get('/insert', (req, res) => {
     try {
         phone = req.query.phone;
-        db_insert(phone);
+        db_insert('+1' + phone);
     } finally {
         res.redirect('http://localhost:3001/');
     }

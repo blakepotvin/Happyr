@@ -61,8 +61,8 @@ async function run() {
     // console.log(await getquote());
 
     await m.init();
-    await m.cleardb();
-    await addphones();
+    // await m.cleardb();
+    // await addphones();
     let arr;
     try {
         arr = await m.find();
