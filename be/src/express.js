@@ -77,7 +77,7 @@ app.get('/insert', (req, res) => {
         // console.log(phone);
         db_insert('+' + phone);
     } finally {
-        res.redirect('http://localhost:3001/');
+        res.redirect('http://prodxgy.github.io/SpartaHack/');
     }
     // res.send('Appended ' + phone + ' to MongoDB!');
     // res.redirect('..');
@@ -94,7 +94,7 @@ app.get('/delete', (req, res) => {
         phone = req.query.phone;
         db_del(phone);
     } finally {
-        res.redirect('http://localhost:3001/');
+        res.redirect('http://prodxgy.github.io/SpartaHack/');
     }
 
 })
@@ -104,7 +104,7 @@ app.get('/clear', (req, res) => {
         // phone = req.query.phone;
         db_del();
     } finally {
-        res.redirect('http://localhost:3001/');
+        res.redirect('http://prodxgy.github.io/SpartaHack/);
     }
 })
 
