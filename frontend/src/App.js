@@ -10,7 +10,7 @@ function App() {
         <input type="phone" placeholder="Phone Number" />
         <Row>
           <Col>
-            <Button variant="primary">Insert</Button>
+            <Button variant="primary" href="">Insert</Button>
           </Col>
           <Col>
             <Button variant="danger">Delete</Button>

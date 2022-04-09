@@ -4,6 +4,9 @@ const axios = require('axios')
 const port = 3000
 const mongo = require('./mongo.js');
 const { MongoClient, ServerApiVersion } = require('mongodb');
+const cors = require('cors');
+
+app.use(cors());
 
 const uri = "mongodb+srv://prathik:asdf@spartahack.c84ow.mongodb.net/test?retryWrites=true&w=majority";
 const cli = new MongoClient(uri, { useNewUrlParser: true, useUnifiedTopology: true, serverApi: ServerApiVersion.v1 });
@@ -50,13 +53,18 @@ app.get('/test', (req, res) => {
 app.get('/insert', (req, res) => {
     phone = req.query.phone;
     db_insert(phone);
-    // res.send('Appended ' + phone + ' to MongoDB!');
-    res.redirect('..');
+    res.send('Appended ' + phone + ' to MongoDB!');
+    // res.redirect('..');
 })
 
 app.get('/find', (req, res) => {
     phone = req.query.phone;
     db_find(phone);
+})
+
+app.get('/del', (req, res) => {
+    phone = req.query.phone;
+    db_del(phone);
 })
 
 
