@@ -27,7 +27,7 @@ function App() {
             <Button variant="primary" onClick={() => insertclick(document.getElementById("phone").value)}>Insert</Button>
           </Col>
           <Col>
-            <Button variant="danger" onClick={() => deleteclick(document.getElementById("phone"))}>Delete</Button>
+            <Button variant="danger" onClick={() => deleteclick(document.getElementById("phone").value)}>Delete</Button>
           </Col>
         </Row>
       </header>

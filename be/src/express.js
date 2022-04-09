@@ -43,15 +43,24 @@ async function db_find(phone_num) {
 }
 
 async function db_del(phone_num) {
-    await m.init();
+    if (phone_num == undefined) {
+        await m.init();
+        await m.cleardb();
+    } else {
+        await m.init();
 
-    doc = {
-        phone: phone_num
+        doc = {
+            phone: phone_num
+        }
+    
+        await m.delete(doc);
     }
 
-    const result = await m.deleteMany(doc);
+    await m.close();
 
-    console.log("Successfully deleted " + result.deletedCount + " documents");
+    
+
+    // console.log("Successfully deleted " + result.deletedCount + " documents");
 }
 
 
@@ -84,6 +93,15 @@ app.get('/delete', (req, res) => {
         res.redirect('http://localhost:3001/');
     }
 
+})
+
+app.get('/clear', (req, res) => {
+    try {
+        // phone = req.query.phone;
+        db_del();
+    } finally {
+        res.redirect('http://localhost:3001/');
+    }
 })
 
 

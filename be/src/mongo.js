@@ -47,6 +47,11 @@ module.exports = class Mongo {
         console.log("Deleted " + result.deletedCount + " records");
     }
 
+    async delete() {
+        const result = await this.collection.deleteMany(doc);
+        console.log("Deleted " + result.deletedCount + " records");
+    }
+
 
 }
 
