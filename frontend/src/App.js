@@ -5,6 +5,8 @@ import Row from "react-bootstrap/Row";
 import 'react-phone-number-input/style.css'
 import PhoneInput from 'react-phone-number-input'
 import React, { useEffect, useState } from "react";
+import Header from './components/Header.js';
+import styled from 'styled-components';
 
 // const axios = require('axios')
 
@@ -21,6 +23,12 @@ function deleteclick(phone_num) {
   window.location.href = `http://localhost:3000/delete/?phone=${phone_num}`;
 }
 
+const StyledButtons = styled.div`
+  #button {
+    margin: 10%;
+  }
+`
+
 function App() {
 
 
@@ -28,20 +36,24 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
-      <PhoneInput id="phone"
-        placeholder="Enter phone number"
-        value={phone_value}
-        onChange={setValue}/>
-        {/* <input type="phone" id="phone" placeholder="Phone Number" /> */}
-        <Row>
-          <Col>
-            <Button variant="primary" onClick={() => insertclick(phone_value)}>Insert</Button>
-            {/* <Button variant="primary" onClick={() => insertclick(document.getElementById("phone").value)}>Insert</Button> */}
-          </Col>
-          <Col>
-            <Button variant="danger" onClick={() => deleteclick(document.getElementById("phone").value)}>Delete</Button>
-          </Col>
-        </Row>
+      <Header />
+      <StyledButtons>
+        <PhoneInput id="phone"
+          placeholder="Enter phone number"
+          value={phone_value}
+          onChange={setValue}/>
+          {/* <input type="phone" id="phone" placeholder="Phone Number" /> */}
+          <Row>
+            <Col>
+              <Button variant="primary" id="button" onClick={() => insertclick(phone_value)}>Insert</Button>
+              {/* <Button variant="primary" onClick={() => insertclick(document.getElementById("phone").value)}>Insert</Button> */}
+            </Col>
+            <Col>
+              <Button variant="danger" id="button" onClick={() => deleteclick(document.getElementById("phone").value)}>Delete</Button>
+            </Col>
+          </Row>
+      </StyledButtons>
+      
       </header>
     </div>
   );
