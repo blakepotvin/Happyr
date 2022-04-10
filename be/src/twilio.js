@@ -9,7 +9,7 @@ const utf8 = require('utf8');
 const mongo = require('./mongo.js');
 const { MongoClient, ServerApiVersion } = require('mongodb');
 
-const uri = "mongodb+srv://prathik:asdf@spartahack.c84ow.mongodb.net/test?retryWrites=true&w=majority";
+const uri = process.env.MONGO_API;
 const cli = new MongoClient(uri, { useNewUrlParser: true, useUnifiedTopology: true, serverApi: ServerApiVersion.v1 });
 const db_name = "test";
 const collection_name = "test";
