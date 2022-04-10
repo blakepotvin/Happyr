@@ -9,20 +9,6 @@ import Header from './components/Header.js';
 import styled from 'styled-components';
 
 // const axios = require('axios')
-// ur mom ent = require('moment') << filled in by github /copilor thing
-//i want to make a function that will take a phone number and send it to the backend
-//i want to make a function that will take a phone number and send it to the backend
-//i want to make a function that will take a phone number and send it to the backend
-//i want to make a function that will take a phone number and send it to the backend
-//i want to make a function that will take a phone number and send it to the backend
-//i want to make a function that will take a phone number and send it to the backend
-//i want to make a function that will take a phone number and send it to the backend
-//i want to make a function that will take a phone number and send it to the backend
-//i want to make a function that will take a phone number and send it to the backend
-
-//create a function that will take a phone number and send it to the backend
-//create a function that will take a phone number and send it to the backend
-//create a function that will take a phone number and send it to the backend
 function insertclick(phone_num) {
   console.log(phone_num);
   phone_num = phone_num.slice(1);
@@ -40,6 +26,11 @@ const StyledButtons = styled.div`
     margin: 10%;
   }
 `
+const styleDemoText = {
+  fontSize: 12,
+  marginTop: 200,
+  color: "gray"
+}
 
 function App() {
 
@@ -62,6 +53,14 @@ function App() {
             </Col>
             <Col>
               <Button variant="danger" id="button" onClick={() => deleteclick(document.getElementById("phone").value)}>Delete</Button>
+            </Col>   
+          </Row>
+          <Row>
+            <Col>
+              <p style={styleDemoText}>
+                  For testing/judging purposes - the button below will send a text as if it was the morning.
+              </p>
+              <Button variant="primary" id="button" onClick={() => {}}>Test Text Send</Button>
             </Col>
           </Row>
       </StyledButtons>
