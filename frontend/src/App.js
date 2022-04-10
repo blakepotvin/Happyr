@@ -63,7 +63,7 @@ function App() {
               <p style={styleDemoText}>
                   For testing/judging purposes - the button below will send a text as if it was the morning.
               </p>
-              <Button variant="primary" id="button" onClick={() => {}}>Test Text Send</Button>
+              <Button variant="primary" id="button" onClick={() => testing()}>Test Text Send</Button>
             </Col>
           </Row>
       </StyledButtons>
