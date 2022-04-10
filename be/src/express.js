@@ -1,6 +1,5 @@
 require('dotenv').config();
 const id = process.env.MONGO_API;
-const fs = require('fs');
 
 const express = require('express')
 const fs = require('fs');
