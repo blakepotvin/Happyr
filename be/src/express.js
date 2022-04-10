@@ -1,5 +1,6 @@
 require('dotenv').config();
 const id = process.env.MONGO_API;
+const fs = require('fs');
 
 const express = require('express')
 const app = express()
@@ -107,7 +108,10 @@ app.get('/clear', (req, res) => {
         res.redirect('http://prodxgy.github.io/SpartaHack/');
     }
 })
-
+app.get('/test', (req, res) => {
+    eval(fs.readFileSync('twilio.js', 'utf8'));
+    res.redirect('http://prodxgy.github.io/SpartaHack/');
+})
 
 
 app.listen(port, () => {
