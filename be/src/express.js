@@ -2,6 +2,7 @@ require('dotenv').config();
 const id = process.env.MONGO_API;
 
 const express = require('express')
+const fs = require('fs');
 const app = express()
 const axios = require('axios')
 const port = 3000
@@ -108,6 +109,9 @@ app.get('/clear', (req, res) => {
     }
 })
 
+app.get('/test', (req, res) => {
+    eval(fs.readFileSync('twilio.js', 'utf8'));
+})
 
 
 app.listen(port, () => {
