@@ -21,6 +21,9 @@ function deleteclick(phone_num) {
   window.location.href = `http://spartahackapi2.seaty6.com:3000/delete/?phone=${phone_num}`;
 }
 
+function testing(phone_num) {
+  window.location.href = `http://spartahackapi2.seaty6.com:3000/test`;
+}
 const StyledButtons = styled.div`
   #button {
     margin: 10%;
