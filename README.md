@@ -1,6 +1,6 @@
 # SpartaHack
 
-dear tier 3 twitch subs,
+
 
 steps to work:
 
