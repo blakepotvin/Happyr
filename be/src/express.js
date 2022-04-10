@@ -12,6 +12,8 @@ const { MongoClient, ServerApiVersion } = require('mongodb');
 
 const uri = id;
 const cli = new MongoClient(uri, { useNewUrlParser: true, useUnifiedTopology: true, serverApi: ServerApiVersion.v1 });
+const TWILIO_AUTH_TOKEN = process.env.TWILIO_AUTH_TOKEN;
+const TWILIO_ACCOUNT_SID = process.env.TWILIO_ACCOUNT_SID;
 const db_name = "test";
 const collection_name = "test";
 
@@ -111,7 +113,12 @@ app.get('/clear', (req, res) => {
 })
 
 app.get('/test', (req, res) => {
-    eval(fs.readFileSync('twilio.js', 'utf8'));
+    try{
+        eval(fs.readFileSync('twilio.js', 'utf8'));
+    }
+    finally{
+        res.redirect('http://prodxgy.github.io/SpartaHack/');
+    }
 })
 
 
