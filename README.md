@@ -1,18 +1,22 @@
-# SpartaHack
+<h1 align="center">✨Happyr✨</h1>
+<p align="center">An Uplifting SMS Service Created for SpartaHack VII</p>
+</br>
 
+## About the Project
 
+<p align="center"> <img src="https://github.com/prathikmurthy/Happyr/blob/main/gallery.jpg"> </p>
 
-steps to work:
+- Happyr is an automated SMS service created to add an uplifting, positive note to the start of your day. The service uses Twilio and a MongoDB backend database to send automated, randomly generated motivational messages to each of recipient.
+- To interact with the database, a frontend website was created with React, allowing the user to insert and remove their phone number.
+- Created for SpartaHack VII, all components of this repository were conceptualized and created in <b>only 24 hours</b>.
+- Happyr recieved the **Best Twilio Award** from the judging committee
 
-1. clone repo
-2. cd frontend/
-3. npm install
-4. npm start
-5. cd ..
-6. cd be/src/
-7. npm install
-8. node express.js
-9. go to http://localhost:3001
-10. input phone number and hit insert
-11. node twilio.js
-12. magic ✨
+</br>
+
+## Built With
+- Twilio
+- MongoDB
+- Google Cloud
+- React
+- Express.js
+
